@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { MaterialDesignSystemTheme } from './material-design-system/types/theme.type';
 import { MaterialDesignSystemModule } from './material-design-system/material-design-system.module';
-import { MaterialDesignSystemService } from './material-design-system/services/material-design-system.service';
+import { MaterialDesignSystemService, MaterialDesignSystemTheme } from './material-design-system/services/material-design-system.service';
 
 @Component({
   standalone: true,

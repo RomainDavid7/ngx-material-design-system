@@ -8,7 +8,7 @@
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "mds",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -25,7 +25,8 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./src/app/material-design-system/styles/main.css"
             ],
             "scripts": []
           },
