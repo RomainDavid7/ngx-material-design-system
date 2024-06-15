@@ -1,0 +1,31 @@
+:host {
+        box-shadow: var(--md-sys-elevation-level0);
+        background-color: var(--md-sys-color-secondary-container);
+}
+
+:host > span {
+        color: var(--md-sys-color-on-secondary-container);
+}
+
+:host[disabled] {
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) 12%);
+}
+
+:host[disabled] > span {
+        color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) 38%);
+}
+
+:host:not([disabled]):hover {
+        box-shadow: var(--md-sys-elevation-level1);
+        background-color: color-mix(in srgb, var(--md-sys-color-secondary-container), var(--md-sys-color-on-secondary-container) var(--md-sys-state-hover-state-layer-opacity));
+}
+
+:host:not([disabled]):focus-visible {
+        box-shadow: var(--md-sys-elevation-level0);
+        background-color: color-mix(in srgb, var(--md-sys-color-secondary-container), var(--md-sys-color-on-secondary-container) var(--md-sys-state-focus-state-layer-opacity));
+}
+
+:host:not([disabled]):active {
+        box-shadow: var(--md-sys-elevation-level0);
+        background-color: color-mix(in srgb, var(--md-sys-color-secondary-container), var(--md-sys-color-on-secondary-container) var(--md-sys-state-pressed-state-layer-opacity));
+}

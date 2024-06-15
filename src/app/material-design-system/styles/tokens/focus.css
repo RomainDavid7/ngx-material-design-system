@@ -1,0 +1,11 @@
+:root {
+        --md-sys-state-focus-indicator-style: solid;
+        --md-sys-state-focus-indicator-thickness: 3px;
+        --md-sys-state-focus-indicator-outer-offset: 2px;
+}
+
+*:focus-visible {
+        outline-style: var(--md-sys-state-focus-indicator-style);
+        outline-width: var(--md-sys-state-focus-indicator-thickness);
+        outline-offset: var(--md-sys-state-focus-indicator-outer-offset);
+}

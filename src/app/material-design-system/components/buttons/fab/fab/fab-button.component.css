@@ -1,0 +1,138 @@
+:host {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: var(--md-sys-elevation-level3);
+        transition: all var(--md-sys-motion-easing-standard) var(--md-sys-motion-duration-short4);
+}
+
+:host.lowered {
+        cursor: pointer;
+        box-shadow: var(--md-sys-elevation-level1);
+}
+
+:host:hover {
+        box-shadow: var(--md-sys-elevation-level4);
+}
+
+:host.lowered:hover {
+        box-shadow: var(--md-sys-elevation-level2);
+}
+
+:host:focus-visible, :host:active {
+        box-shadow: var(--md-sys-elevation-level3);
+}
+
+:host.lowered:focus-visible, :host.lowered:active {
+        box-shadow: var(--md-sys-elevation-level1);
+}
+
+:host.small {
+        width: 40px;
+        height: 40px;
+        border-radius: var(--md-sys-shape-corner-medium);
+}
+
+:host.small > span {
+        font-size: 24px;
+}
+
+:host.medium {
+        width: 56px;
+        height: 56px;
+        border-radius: var(--md-sys-shape-corner-large);
+}
+
+:host.medium > span {
+        font-size: 24px;
+}
+
+:host.large {
+        width: 96px;
+        height: 96px;
+        border-radius: var(--md-sys-shape-corner-extra-large);
+}
+
+:host.large > span {
+        font-size: 36px;
+}
+
+:host.primary {
+        background-color: var(--md-sys-color-primary-container);
+}
+
+:host.primary > span {
+        color: var(--md-sys-color-on-primary-container);
+}
+
+:host.primary:hover {
+        background-color: color-mix(in srgb, var(--md-sys-color-primary-container), var(--md-sys-color-on-primary-container) var(--md-sys-state-hover-state-layer-opacity));
+}
+
+:host.primary:focus-visible {
+        background-color: color-mix(in srgb, var(--md-sys-color-primary-container), var(--md-sys-color-on-primary-container) var(--md-sys-state-focus-state-layer-opacity));
+}
+
+:host.primary:active {
+        background-color: color-mix(in srgb, var(--md-sys-color-primary-container), var(--md-sys-color-on-primary-container) var(--md-sys-state-pressed-state-layer-opacity));
+}
+
+:host.secondary {
+        background-color: var(--md-sys-color-secondary-container);
+}
+
+:host.secondary > span {
+        color: var(--md-sys-color-on-secondary-container);
+}
+
+:host.secondary:hover {
+        background-color: color-mix(in srgb, var(--md-sys-color-secondary-container), var(--md-sys-color-on-secondary-container) var(--md-sys-state-hover-state-layer-opacity));
+}
+
+:host.secondary:focus-visible {
+        background-color: color-mix(in srgb, var(--md-sys-color-secondary-container), var(--md-sys-color-on-secondary-container) var(--md-sys-state-focus-state-layer-opacity));
+}
+
+:host.secondary:active {
+        background-color: color-mix(in srgb, var(--md-sys-color-secondary-container), var(--md-sys-color-on-secondary-container) var(--md-sys-state-pressed-state-layer-opacity));
+}
+
+:host.branded, :host.surface {
+        background-color: var(--md-sys-color-surface-container-high);
+}
+
+:host.lowered.branded, :host.lowered.surface {
+        background-color: var(--md-sys-color-surface-container-low);
+}
+
+:host.branded > span {
+        color: var(--md-sys-color-on-surface);
+}
+
+:host.surface > span {
+        color: var(--md-sys-color-primary);
+}
+
+:host.branded:hover, :host.surface:hover {
+        background-color: color-mix(in srgb, var(--md-sys-color-surface-container-high), var(--md-sys-color-primary) var(--md-sys-state-hover-state-layer-opacity));
+}
+
+:host.surface:focus-visible, :host.surface:focus-visible {
+        background-color: color-mix(in srgb, var(--md-sys-color-surface-container-high), var(--md-sys-color-primary) var(--md-sys-state-focus-state-layer-opacity));
+}
+
+:host.surface:active, :host.surface:active {
+        background-color: color-mix(in srgb, var(--md-sys-color-surface-container-high), var(--md-sys-color-primary) var(--md-sys-state-pressed-state-layer-opacity));
+}
+
+:host.branded.lowered:hover, :host.surface.lowered:hover {
+        background-color: color-mix(in srgb, var(--md-sys-color-surface-container-low), var(--md-sys-color-primary) var(--md-sys-state-hover-state-layer-opacity));
+}
+
+:host.surface.lowered:focus-visible, :host.surface.lowered:focus-visible {
+        background-color: color-mix(in srgb, var(--md-sys-color-surface-container-low), var(--md-sys-color-primary) var(--md-sys-state-focus-state-layer-opacity));
+}
+
+:host.surface.lowered:active, :host.surface.lowered:active {
+        background-color: color-mix(in srgb, var(--md-sys-color-surface-container-low), var(--md-sys-color-primary) var(--md-sys-state-pressed-state-layer-opacity));
+}

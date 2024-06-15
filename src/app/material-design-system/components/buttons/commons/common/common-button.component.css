@@ -1,0 +1,26 @@
+:host {
+        gap: 8px;
+        height: 40px;
+        display: flex;
+        padding: 0 24px;
+        align-items: center;
+        border-radius: 20px;
+        box-sizing: border-box;
+        transition: all var(--md-sys-motion-easing-standard) var(--md-sys-motion-duration-short4);
+}
+
+:host > span.material-symbols-outlined {
+        font-size: 18px;
+}
+
+:host.with-icon {
+        padding-left: 16px;
+}
+
+:host[disabled]:hover {
+        cursor: not-allowed;
+}
+
+:host:not([disabled]):hover {
+        cursor: pointer;
+}
