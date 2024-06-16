@@ -1,4 +1,5 @@
 import { NgModule } from "@angular/core";
+import { CardsModule } from "./components/cards/cards.module";
 import { BadgesModule } from "./components/badges/badges.module";
 import { ButtonsModule } from "./components/buttons/buttons.module";
 import { MaterialDesignSystemService } from "./services/material-design-system.service";
@@ -7,11 +8,13 @@ import { MaterialDesignSystemService } from "./services/material-design-system.s
         providers: [MaterialDesignSystemService],
         imports: [
                 BadgesModule, 
-                ButtonsModule
+                ButtonsModule,
+                CardsModule
         ],
         exports: [
                 BadgesModule,
-                ButtonsModule
+                ButtonsModule,
+                CardsModule
         ]
 })
 export class MaterialDesignSystemModule {}

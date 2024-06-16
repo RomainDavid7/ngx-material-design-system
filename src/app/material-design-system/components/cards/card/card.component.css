@@ -1,0 +1,15 @@
+:host {
+        display: flex;
+        padding: 16px;
+        box-sizing: border-box;
+        border-radius: var(--md-sys-shape-corner-medium);
+        transition: all var(--md-sys-motion-easing-standard) var(--md-sys-motion-duration-short4);
+}
+
+:host.disabled {
+        pointer-events: none;
+}
+
+:host.disabled::ng-deep * {
+        opacity: 50%;
+}

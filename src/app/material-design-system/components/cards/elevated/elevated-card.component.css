@@ -1,0 +1,23 @@
+:host {
+        box-shadow: var(--md-sys-elevation-level1);
+        background-color: var(--md-sys-color-surface-container-low);
+}
+
+:host.disabled {
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-surface) 38%);
+}
+
+:host:not(.disabled):hover {
+        box-shadow: var(--md-sys-elevation-level2);
+        background-color: color-mix(in srgb, var(--md-sys-color-surface-container-low), var(--md-sys-color-on-surface) var(--md-sys-state-hover-state-layer-opacity));
+}
+
+:host:not(.disabled):focus-visible {
+        box-shadow: var(--md-sys-elevation-level2);
+        background-color: color-mix(in srgb, var(--md-sys-color-surface-container-low), var(--md-sys-color-on-surface) var(--md-sys-state-focus-state-layer-opacity));
+}
+
+:host:not(.disabled):active {
+        box-shadow: var(--md-sys-elevation-level1);
+        background-color: color-mix(in srgb, var(--md-sys-color-surface-container-low), var(--md-sys-color-on-surface) var(--md-sys-state-pressed-state-layer-opacity));
+}
