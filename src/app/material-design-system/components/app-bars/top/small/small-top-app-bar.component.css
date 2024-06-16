@@ -1,0 +1,16 @@
+:host {
+        gap: 8px;
+        height: 64px;
+        padding: 0 4px;
+        align-items: center;
+}
+
+:host > span.title-large {
+        color: var(--md-sys-color-on-surface)
+}
+
+:host > section.trailing-icons {
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+}

@@ -1,142 +1,173 @@
-<section class="line">
-        <mds-badge/>
-        <mds-badge label="1"/>
-        <mds-badge label="999+"/>
-</section>
+<!--<mds-center-aligned-top-app-bar text="Center aligned top app bar" leadingIcon="menu" trailingIcon="person" scrollableElementId="main"/>-->
+<mds-small-top-app-bar text="Small top app bar" leadingIcon="arrow_back" scrollableElementId="main">
+        <mds-standard-icon-button icon="person"/>
+        <mds-standard-icon-button icon="logout"/>
+        <mds-standard-icon-button icon="more_vert"/>
+</mds-small-top-app-bar>
+<!--<mds-medium-top-app-bar text="Medium top app bar" leadingIcon="arrow_back" scrollableElementId="main">
+        <mds-standard-icon-button icon="person"/>
+        <mds-standard-icon-button icon="logout"/>
+        <mds-standard-icon-button icon="more_vert"/>
+</mds-medium-top-app-bar>-->
+<!--<mds-large-top-app-bar text="Medium top app bar" leadingIcon="arrow_back" scrollableElementId="main">
+        <mds-standard-icon-button icon="person"/>
+        <mds-standard-icon-button icon="logout"/>
+        <mds-standard-icon-button icon="more_vert"/>
+</mds-large-top-app-bar>-->
 
-<section class="line">
-        <mds-elevated-button label="Elevated"/>
-        <mds-elevated-button label="Elevated" icon="add"/>
-        <mds-elevated-button label="Elevated" [disabled]="true"/>
-        <mds-elevated-button label="Elevated" icon="add" [disabled]="true"/>
-</section>
-
-<section class="line">
-        <mds-filled-button label="Filled"/>
-        <mds-filled-button label="Filled" icon="add"/>
-        <mds-filled-button label="Filld" [disabled]="true"/>
-        <mds-filled-button label="Filled" icon="ad" [disabled]="true"/>
-</section>
-
-<section class="line">
-        <mds-filled-tonal-button label="Filled tonal"/>
-        <mds-filled-tonal-button label="Filled tonal" icon="add"/>
-        <mds-filled-tonal-button label="Filled tonal" [disabled]="true"/>
-        <mds-filled-tonal-button label="Filled tonal" icon="add" [disabled]="true"/>
-</section>
-
-<section class="line">
-        <mds-outlined-button label="Outlined"/>
-        <mds-outlined-button label="Outlined" icon="add"/>
-        <mds-outlined-button label="Outlined" [disabled]="true"/>
-        <mds-outlined-button label="Outlined" icon="add" [disabled]="true"/>
-</section>
-
-<section class="line">
-        <mds-text-button label="Text"/>
-        <mds-text-button label="Text" icon="add"/>
-        <mds-text-button label="Text" [disabled]="true"/>
-        <mds-text-button label="Text" icon="add" [disabled]="true"/>
-</section>
-
-<section class="line">
-        <mds-fab-button icon="add" size="small"/>
-        <mds-fab-button icon="add"/>
-        <mds-fab-button icon="add" size="large"/>
-        <mds-fab-button icon="add" size="small" color="secondary"/>
-        <mds-fab-button icon="add" color="secondary"/>
-        <mds-fab-button icon="add" size="large" color="secondary"/>
-        <mds-fab-button icon="add" size="small" color="tertiary"/>
-        <mds-fab-button icon="add" color="tertiary"/>
-        <mds-fab-button icon="add" size="large" color="tertiary"/>
-        <mds-fab-button icon="add" size="small" color="branded"/>
-        <mds-fab-button icon="add" color="branded"/>
-        <mds-fab-button icon="add" size="large" color="branded"/>
-        <mds-fab-button icon="add" size="small" color="surface"/>
-        <mds-fab-button icon="add" color="surface"/>
-        <mds-fab-button icon="add" size="large" color="surface"/>
-</section>
-
-<section class="line">
-        <mds-fab-button icon="add" size="small" [lowered]="true"/>
-        <mds-fab-button icon="add" [lowered]="true"/>
-        <mds-fab-button icon="add" size="large" [lowered]="true"/>
-        <mds-fab-button icon="add" size="small" color="secondary" [lowered]="true"/>
-        <mds-fab-button icon="add" color="secondary" [lowered]="true"/>
-        <mds-fab-button icon="add" size="large" color="secondary" [lowered]="true"/>
-        <mds-fab-button icon="add" size="small" color="tertiary" [lowered]="true"/>
-        <mds-fab-button icon="add" color="tertiary" [lowered]="true"/>
-        <mds-fab-button icon="add" size="large" color="tertiary" [lowered]="true"/>
-        <mds-fab-button icon="add" size="small" color="branded" [lowered]="true"/>
-        <mds-fab-button icon="add" color="branded" [lowered]="true"/>
-        <mds-fab-button icon="add" size="large" color="branded" [lowered]="true"/>
-        <mds-fab-button icon="add" size="small" color="surface" [lowered]="true"/>
-        <mds-fab-button icon="add" color="surface" [lowered]="true"/>
-        <mds-fab-button icon="add" size="large" color="surface" [lowered]="true"/>
-</section>
-
-<section class="line">
-        <mds-extended-fab-button label="Extended FAB"/>
-        <mds-extended-fab-button icon="add" label="Extended FAB"/>
-        <mds-extended-fab-button label="Extended FAB" [lowered]="true"/>
-        <mds-extended-fab-button icon="add" label="Extended FAB" [lowered]="true"/>
-</section>
-
-<section class="line">
-        <mds-filled-icon-button icon="add"/>
-        <mds-filled-icon-button icon="add" [selected]="true"/>
-        <mds-filled-icon-button icon="add" [disabled]="true"/>
-        <mds-filled-icon-button icon="add" [selected]="true" [disabled]="true"/>
-</section>
-
-<section class="line">
-        <mds-filled-tonal-icon-button icon="add"/>
-        <mds-filled-tonal-icon-button icon="add" [selected]="true"/>
-        <mds-filled-tonal-icon-button icon="add" [disabled]="true"/>
-        <mds-filled-tonal-icon-button icon="add" [selected]="true" [disabled]="true"/>
-</section>
-
-<section class="line">
-        <mds-outlined-icon-button icon="add"/>
-        <mds-outlined-icon-button icon="add" [selected]="true"/>
-        <mds-outlined-icon-button icon="add" [disabled]="true"/>
-        <mds-outlined-icon-button icon="add" [selected]="true" [disabled]="true"/>
-</section>
-
-<section class="line">
+<mds-bottom-app-bar FABButtonIcon="add">
         <mds-standard-icon-button icon="add"/>
-        <mds-standard-icon-button icon="add" [selected]="true"/>
-        <mds-standard-icon-button icon="add" [disabled]="true"/>
-        <mds-standard-icon-button icon="add" [selected]="true" [disabled]="true"/>
+        <mds-standard-icon-button icon="remove"/>
+        <mds-standard-icon-button icon="check"/>
+        <mds-standard-icon-button icon="cancel"/>
+</mds-bottom-app-bar>
+
+<section id="theme-manager">
+        <mds-outlined-icon-button icon="light_mode" (click)="setTheme('light')"/>
+        <mds-outlined-icon-button icon="dark_mode" (click)="setTheme('dark')"/>
 </section>
 
-<section class="line">
-        <mds-segmented-button [(options)]="segmentedButtonOptions"/>
-</section>
+<article id="main">
+        <section class="line">
+                <mds-badge/>
+                <mds-badge label="1"/>
+                <mds-badge label="999+"/>
+        </section>
 
-<section class="line">
-        <mds-elevated-card>
-                <span class="body-medium">Elevated card</span>
-        </mds-elevated-card>
-        <mds-elevated-card [disabled]="true">
-                <span class="body-medium">Elevated card</span>
-        </mds-elevated-card>
-</section>
+        <section class="line">
+                <mds-elevated-button label="Elevated"/>
+                <mds-elevated-button label="Elevated" icon="add"/>
+                <mds-elevated-button label="Elevated" [disabled]="true"/>
+                <mds-elevated-button label="Elevated" icon="add" [disabled]="true"/>
+        </section>
 
-<section class="line">
-        <mds-filled-card>
-                <span class="body-medium">Filled card</span>
-        </mds-filled-card>
-        <mds-filled-card [disabled]="true">
-                <span class="body-medium">Filled card</span>
-        </mds-filled-card>
-</section>
+        <section class="line">
+                <mds-filled-button label="Filled"/>
+                <mds-filled-button label="Filled" icon="add"/>
+                <mds-filled-button label="Filld" [disabled]="true"/>
+                <mds-filled-button label="Filled" icon="ad" [disabled]="true"/>
+        </section>
 
-<section class="line">
-        <mds-outlined-card>
-                <span class="body-medium">Outlined card</span>
-        </mds-outlined-card>
-        <mds-outlined-card [disabled]="true">
-                <span class="body-medium">Outlined card</span>
-        </mds-outlined-card>
-</section>
+        <section class="line">
+                <mds-filled-tonal-button label="Filled tonal"/>
+                <mds-filled-tonal-button label="Filled tonal" icon="add"/>
+                <mds-filled-tonal-button label="Filled tonal" [disabled]="true"/>
+                <mds-filled-tonal-button label="Filled tonal" icon="add" [disabled]="true"/>
+        </section>
+
+        <section class="line">
+                <mds-outlined-button label="Outlined"/>
+                <mds-outlined-button label="Outlined" icon="add"/>
+                <mds-outlined-button label="Outlined" [disabled]="true"/>
+                <mds-outlined-button label="Outlined" icon="add" [disabled]="true"/>
+        </section>
+
+        <section class="line">
+                <mds-text-button label="Text"/>
+                <mds-text-button label="Text" icon="add"/>
+                <mds-text-button label="Text" [disabled]="true"/>
+                <mds-text-button label="Text" icon="add" [disabled]="true"/>
+        </section>
+
+        <section class="line">
+                <mds-fab-button icon="add" size="small"/>
+                <mds-fab-button icon="add"/>
+                <mds-fab-button icon="add" size="large"/>
+                <mds-fab-button icon="add" size="small" color="secondary"/>
+                <mds-fab-button icon="add" color="secondary"/>
+                <mds-fab-button icon="add" size="large" color="secondary"/>
+                <mds-fab-button icon="add" size="small" color="tertiary"/>
+                <mds-fab-button icon="add" color="tertiary"/>
+                <mds-fab-button icon="add" size="large" color="tertiary"/>
+                <mds-fab-button icon="add" size="small" color="branded"/>
+                <mds-fab-button icon="add" color="branded"/>
+                <mds-fab-button icon="add" size="large" color="branded"/>
+                <mds-fab-button icon="add" size="small" color="surface"/>
+                <mds-fab-button icon="add" color="surface"/>
+                <mds-fab-button icon="add" size="large" color="surface"/>
+        </section>
+
+        <section class="line">
+                <mds-fab-button icon="add" size="small" [lowered]="true"/>
+                <mds-fab-button icon="add" [lowered]="true"/>
+                <mds-fab-button icon="add" size="large" [lowered]="true"/>
+                <mds-fab-button icon="add" size="small" color="secondary" [lowered]="true"/>
+                <mds-fab-button icon="add" color="secondary" [lowered]="true"/>
+                <mds-fab-button icon="add" size="large" color="secondary" [lowered]="true"/>
+                <mds-fab-button icon="add" size="small" color="tertiary" [lowered]="true"/>
+                <mds-fab-button icon="add" color="tertiary" [lowered]="true"/>
+                <mds-fab-button icon="add" size="large" color="tertiary" [lowered]="true"/>
+                <mds-fab-button icon="add" size="small" color="branded" [lowered]="true"/>
+                <mds-fab-button icon="add" color="branded" [lowered]="true"/>
+                <mds-fab-button icon="add" size="large" color="branded" [lowered]="true"/>
+                <mds-fab-button icon="add" size="small" color="surface" [lowered]="true"/>
+                <mds-fab-button icon="add" color="surface" [lowered]="true"/>
+                <mds-fab-button icon="add" size="large" color="surface" [lowered]="true"/>
+        </section>
+
+        <section class="line">
+                <mds-extended-fab-button label="Extended FAB"/>
+                <mds-extended-fab-button icon="add" label="Extended FAB"/>
+                <mds-extended-fab-button label="Extended FAB" [lowered]="true"/>
+                <mds-extended-fab-button icon="add" label="Extended FAB" [lowered]="true"/>
+        </section>
+
+        <section class="line">
+                <mds-filled-icon-button icon="add"/>
+                <mds-filled-icon-button icon="add" [selected]="true"/>
+                <mds-filled-icon-button icon="add" [disabled]="true"/>
+                <mds-filled-icon-button icon="add" [selected]="true" [disabled]="true"/>
+        </section>
+
+        <section class="line">
+                <mds-filled-tonal-icon-button icon="add"/>
+                <mds-filled-tonal-icon-button icon="add" [selected]="true"/>
+                <mds-filled-tonal-icon-button icon="add" [disabled]="true"/>
+                <mds-filled-tonal-icon-button icon="add" [selected]="true" [disabled]="true"/>
+        </section>
+
+        <section class="line">
+                <mds-outlined-icon-button icon="add"/>
+                <mds-outlined-icon-button icon="add" [selected]="true"/>
+                <mds-outlined-icon-button icon="add" [disabled]="true"/>
+                <mds-outlined-icon-button icon="add" [selected]="true" [disabled]="true"/>
+        </section>
+
+        <section class="line">
+                <mds-standard-icon-button icon="add"/>
+                <mds-standard-icon-button icon="add" [selected]="true"/>
+                <mds-standard-icon-button icon="add" [disabled]="true"/>
+                <mds-standard-icon-button icon="add" [selected]="true" [disabled]="true"/>
+        </section>
+
+        <section class="line">
+                <mds-segmented-button [(options)]="segmentedButtonOptions"/>
+        </section>
+
+        <section class="line">
+                <mds-elevated-card>
+                        <span class="body-medium">Elevated card</span>
+                </mds-elevated-card>
+                <mds-elevated-card [disabled]="true">
+                        <span class="body-medium">Elevated card</span>
+                </mds-elevated-card>
+        </section>
+
+        <section class="line">
+                <mds-filled-card>
+                        <span class="body-medium">Filled card</span>
+                </mds-filled-card>
+                <mds-filled-card [disabled]="true">
+                        <span class="body-medium">Filled card</span>
+                </mds-filled-card>
+        </section>
+
+        <section class="line">
+                <mds-outlined-card>
+                        <span class="body-medium">Outlined card</span>
+                </mds-outlined-card>
+                <mds-outlined-card [disabled]="true">
+                        <span class="body-medium">Outlined card</span>
+                </mds-outlined-card>
+        </section>
+</article>

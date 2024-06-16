@@ -1,0 +1,7 @@
+<section class="line">
+        <mds-standard-icon-button [icon]="leadingIcon()" (click)="onLeadingIconClicked.emit($event)"/>
+        <section class="trailing-icons">
+                <ng-content/>
+        </section>
+</section>
+<span class="headline-medium">{{ text() }}</span>

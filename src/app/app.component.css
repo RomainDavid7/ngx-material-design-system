@@ -1,7 +1,50 @@
+mds-small-top-app-bar,
+mds-large-top-app-bar,
+mds-medium-top-app-bar,
+mds-center-aligned-top-app-bar {
+        top: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+}
+
+mds-bottom-app-bar {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: fixed;
+}
+
+section#theme-manager {
+        gap: 8px;
+        right: 24px;
+        bottom: 80px;
+        z-index: 9999;
+        display: flex;
+        position: fixed;
+        width: fit-content;
+        flex-direction: row;
+        border-radius: 20px;
+}
+
+article {
+        left: 0;
+        right: 0;
+        top: 64px; /* 64px 112px 152px*/
+        bottom: 72px;
+        position: fixed;
+        overflow: hidden;
+        overflow-y: auto;
+}
+
 section.line {
         gap: 24px;
         display: flex;
         padding: 8px 24px;
         align-items: center;
         box-sizing: border-box;
+}
+
+span {
+        color: var(--md-sys-color-on-surface)
 }

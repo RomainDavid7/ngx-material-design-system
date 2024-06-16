@@ -1,0 +1,25 @@
+:host {
+        gap: 8px;
+        height: 112px;
+        flex-direction: column;
+        padding: 8px 4px 24px 4px;
+        justify-content: space-between;
+}
+
+:host > span.headline-small {
+        padding-left: 8px;
+        box-sizing: border-box;
+        color: var(--md-sys-color-on-surface)
+}
+
+:host > section.line {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+
+:host > section.line > section.trailing-icons {
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+}
