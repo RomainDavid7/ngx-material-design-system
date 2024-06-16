@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { MaterialDesignSystemModule } from './material-design-system/material-design-system.module';
-import { MaterialDesignSystemService, MaterialDesignSystemTheme } from './material-design-system/services/material-design-system.service';
 import { ISegmentedButtonOption } from './material-design-system/components/buttons/segmented/segmented-button.component';
+import { MaterialDesignSystemService, MaterialDesignSystemTheme } from './material-design-system/services/material-design-system.service';
 
 @Component({
   standalone: true,

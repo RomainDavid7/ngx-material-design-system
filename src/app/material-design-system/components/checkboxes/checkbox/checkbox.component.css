@@ -1,0 +1,86 @@
+:host {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        border-radius: 20px;
+        align-items: center;
+        justify-content: center;
+        transition: all var(--md-sys-motion-easing-standard) var(--md-sys-motion-duration-short4);
+}
+
+:host > span {
+        width: 18px;
+        height: 18px;
+        font-size: 18px;
+        border-width: 2px;
+        border-radius: 2px;
+        border-style: solid;
+        color: var(--md-sys-color-on-surface-variant);
+        border-color: var(--md-sys-color-on-surface-variant);
+        transition: all var(--md-sys-motion-easing-standard) var(--md-sys-motion-duration-short4);
+}
+
+:host.disabled {
+        pointer-events: none;
+}
+
+:host.selected > span {
+        border-style: none;
+        color: var(--md-sys-color-on-primary);
+        background-color: var(--md-sys-color-primary);
+}
+
+:host.error > span {
+        color: var(--md-sys-color-on-error);
+        border-color: var(--md-sys-color-error);
+}
+
+:host.error.selected > span {
+        background-color: var(--md-sys-color-error);
+}
+
+:host.disabled > span {
+        color: color-mix(in srgb, transparent, var(--md-sys-color-surface) 38%);
+        border-color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) 38%);
+}
+
+:host.disabled.selected > span {
+        color: color-mix(in srgb, transparent, var(--md-sys-color-primary) 38%);
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) 38%);
+}
+
+:host:not(.disabled):hover {
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) var(--md-sys-state-hover-state-layer-opacity));
+}
+
+:host:not(.disabled).selected:hover {
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-primary) var(--md-sys-state-hover-state-layer-opacity));
+}
+
+:host:not(.disabled).error:hover {
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-error) var(--md-sys-state-hover-state-layer-opacity));
+}
+
+:host:not(.disabled):focus-visible {
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) var(--md-sys-state-focus-state-layer-opacity));
+}
+
+:host:not(.disabled).selected:focus-visible {
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-primary) var(--md-sys-state-focus-state-layer-opacity));
+}
+
+:host:not(.disabled).error:focus-visible {
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-error) var(--md-sys-state-focus-state-layer-opacity));
+}
+
+:host:not(.disabled):active {
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) var(--md-sys-state-pressed-state-layer-opacity));
+}
+
+:host:not(.disabled).selected:active {
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-primary) var(--md-sys-state-pressed-state-layer-opacity));
+}
+
+:host:not(.disabled).error:active {
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-error) var(--md-sys-state-pressed-state-layer-opacity));
+}

@@ -3,6 +3,7 @@ import { CardsModule } from "./components/cards/cards.module";
 import { BadgesModule } from "./components/badges/badges.module";
 import { ButtonsModule } from "./components/buttons/buttons.module";
 import { AppBarsModule } from "./components/app-bars/app-bars.module";
+import { CheckboxesModule } from "./components/checkboxes/checkboxes.module";
 import { MaterialDesignSystemService } from "./services/material-design-system.service";
 
 @NgModule({
@@ -11,13 +12,15 @@ import { MaterialDesignSystemService } from "./services/material-design-system.s
                 AppBarsModule,
                 BadgesModule, 
                 ButtonsModule,
-                CardsModule
+                CardsModule,
+                CheckboxesModule
         ],
         exports: [
                 AppBarsModule,
                 BadgesModule,
                 ButtonsModule,
-                CardsModule
+                CardsModule,
+                CheckboxesModule
         ]
 })
 export class MaterialDesignSystemModule {}
