@@ -22,4 +22,6 @@ export class AppComponent {
 
   protected setTheme = (theme: MaterialDesignSystemTheme): void => this.material_design_system_service.setTheme(theme)
 
+  protected test = (data: any): void => console.log(data)
+
 }

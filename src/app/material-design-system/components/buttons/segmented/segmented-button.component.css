@@ -44,6 +44,7 @@
 }
 
 :host > section.disabled {
+        pointer-events: none;
         border-color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) 38%);
         background-color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) 12%);
 }

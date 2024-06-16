@@ -16,6 +16,10 @@
         cursor: pointer;
 }
 
+:host.disabled {
+        pointer-events: none;
+}
+
 :host.disabled:hover {
         cursor: not-allowed;
 }
