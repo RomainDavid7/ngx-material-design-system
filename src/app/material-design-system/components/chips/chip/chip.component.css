@@ -1,0 +1,42 @@
+:host {
+        gap: 8px;
+        height: 32px;
+        display: flex;
+        padding: 0 16px;
+        border-width: 1px;
+        border-style: solid;
+        align-items: center;
+        box-sizing: border-box;
+        border-color: var(--md-sys-color-outline);
+        box-shadow: var(--md-sys-elevation-level0);
+        border-radius: var(--md-sys-shape-corner-small);
+        transition: all var(--md-sys-motion-easing-standard) var(--md-sys-motion-duration-short4);
+}
+
+:host.elevated {
+        border: none;
+        box-shadow: var(--md-sys-elevation-level1);
+        background-color: var(--md-sys-color-surface-container-low);
+}
+
+:host.with-leading-icon {
+        padding-left: 8px;
+}
+
+:host.with-trailing-icon {
+        padding-right: 8px;
+}
+
+:host.disabled {
+        pointer-events: none;
+        box-shadow: var(--md-sys-elevation-level0);
+        border-color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) 38%);
+}
+
+:host > span.material-symbols-outlined {
+        font-size: 18px;
+}
+
+:host.disabled > span {
+        color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) 38%);
+}

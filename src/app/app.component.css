@@ -5,6 +5,7 @@ mds-center-aligned-top-app-bar {
         top: 0;
         left: 0;
         right: 0;
+        z-index: 2;
         position: fixed;
 }
 
@@ -12,6 +13,7 @@ mds-bottom-app-bar {
         left: 0;
         right: 0;
         bottom: 0;
+        z-index: 2;
         position: fixed;
 }
 
@@ -31,6 +33,7 @@ article {
         left: 0;
         right: 0;
         top: 64px; /* 64px 112px 152px*/
+        z-index: 1;
         bottom: 72px;
         position: fixed;
         overflow: hidden;
