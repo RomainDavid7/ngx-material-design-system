@@ -7,7 +7,8 @@ import { CommonButtonComponent } from "../common/common-button.component";
         styleUrls: ['./text-button.component.css', '../common/common-button.component.css'],
         host: { 
                 '[class.with-icon]': '!!icon()',
-                '[tabIndex]': "element.nativeElement.hasAttribute('disabled') ? -1 : 0"
+                '[class.disabled]': 'disabled()',
+                '[tabIndex]': "disabled() ? -1 : 0"
         }
 })
 export class TextButtonComponent extends CommonButtonComponent {}

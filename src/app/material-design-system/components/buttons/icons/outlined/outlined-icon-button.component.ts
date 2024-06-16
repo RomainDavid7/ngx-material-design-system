@@ -7,7 +7,8 @@ import { IconButtonComponent } from "../icon/icon-button.component";
         styleUrls: ['./outlined-icon-button.component.css', '../icon/icon-button.component.css'],
         host: {
                 '[class.selected]': 'selected()',
-                '[tabIndex]': "element.nativeElement.hasAttribute('disabled') ? -1 : 0"
+                '[class.disabled]': 'disabled()',
+                '[tabIndex]': "disabled() ? -1 : 0"
         }
 })
 export class OutlinedIconButtonComponent extends IconButtonComponent {}

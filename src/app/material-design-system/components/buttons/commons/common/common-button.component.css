@@ -17,10 +17,10 @@
         padding-left: 16px;
 }
 
-:host[disabled]:hover {
+:host.disabled:hover {
         cursor: not-allowed;
 }
 
-:host:not([disabled]):hover {
+:host:not(.disabled):hover {
         cursor: pointer;
 }

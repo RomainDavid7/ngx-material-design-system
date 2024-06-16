@@ -7,6 +7,8 @@ export abstract class IconButtonComponent {
 
         public selected: InputSignal<boolean> = input<boolean>(false)
 
+        public disabled: InputSignal<boolean> = input<boolean>(false)
+
         private element: ElementRef<HTMLElement> = inject<ElementRef<HTMLElement>>(ElementRef<HTMLElement>)
 
 }

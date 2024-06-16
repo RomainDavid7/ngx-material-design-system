@@ -6,18 +6,18 @@
         color: var(--md-sys-color-primary);
 }
 
-:host[disabled] > span {
+:host.disabled > span {
         color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) 38%);
 }
 
-:host:not([disabled]):hover {
+:host:not(.disabled):hover {
         background-color: color-mix(in srgb, transparent, var(--md-sys-color-primary) var(--md-sys-state-hover-state-layer-opacity));
 }
 
-:host:not([disabled]):focus-visible {
+:host:not(.disabled):focus-visible {
         background-color: color-mix(in srgb, transparent, var(--md-sys-color-primary) var(--md-sys-state-focus-state-layer-opacity));
 }
 
-:host:not([disabled]):active {
+:host:not(.disabled):active {
         background-color: color-mix(in srgb, transparent, var(--md-sys-color-primary) var(--md-sys-state-pressed-state-layer-opacity));
 }
