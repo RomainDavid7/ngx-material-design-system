@@ -1,0 +1,12 @@
+@for (option of options(); track $index) {
+        <section 
+                #button
+                (click)="handleClick(option)" 
+                [tabIndex]="option.disabled ? -1 : 0"
+                [ngClass]="{selected: option.selected, disabled: option.disabled}">
+                @if(option.icon || option.selected) {
+                        <span class="material-symbols-outlined">{{ option.selected ? 'check' : option.icon }}</span>
+                }
+                <span class="label-large">{{ option.label }}</span>
+        </section>
+}

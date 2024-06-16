@@ -1,0 +1,77 @@
+:host {
+        height: 40px;
+        display: flex;
+        align-items: center;
+}
+
+:host > section {
+        gap: 8px;
+        height: 100%;
+        display: flex;
+        padding: 0 16px;
+        border-width: 1px;
+        align-items: center;
+        border-style: solid;
+        justify-content: center;
+        border-color: var(--md-sys-color-outline);
+        transition: all var(--md-sys-motion-easing-standard) var(--md-sys-motion-duration-short4);
+}
+
+:host > section.selected {
+        background-color: var(--md-sys-color-secondary-container);
+}
+
+:host > section:first-child {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+}
+
+:host > section:last-child {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+}
+
+:host > section > span.material-symbols-outlined {
+        font-size: 18px;
+}
+
+:host > section > span {
+        color: var(--md-sys-color-on-surface);
+}
+
+:host > section.selected > span {
+        color: var(--md-sys-color-on-secondary-container);
+}
+
+:host > section.disabled {
+        border-color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) 38%);
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) 12%);
+}
+
+:host > section.disabled > span {
+        color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) 38%);
+}
+
+:host > section:not(.disabled):hover {
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) var(--md-sys-state-hover-state-layer-opacity));
+}
+
+:host > section:not(.disabled).selected:hover {
+        background-color: color-mix(in srgb, var(--md-sys-color-secondary-container), var(--md-sys-color-on-secondary-container) var(--md-sys-state-hover-state-layer-opacity));
+}
+
+:host > section:not(.disabled):focus-visible {
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) var(--md-sys-state-focus-state-layer-opacity));
+}
+
+:host > section:not(.disabled).selected:focus-visible {
+        background-color: color-mix(in srgb, var(--md-sys-color-secondary-container), var(--md-sys-color-on-secondary-container) var(--md-sys-state-focus-state-layer-opacity));
+}
+
+:host > section:not(.disabled):active {
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) var(--md-sys-state-pressed-state-layer-opacity));
+}
+
+:host > section:not(.disabled).selected:active {
+        background-color: color-mix(in srgb, var(--md-sys-color-secondary-container), var(--md-sys-color-on-secondary-container) var(--md-sys-state-pressed-state-layer-opacity));
+}
