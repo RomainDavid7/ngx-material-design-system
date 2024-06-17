@@ -2,6 +2,7 @@ import { Component, Signal, WritableSignal, computed, inject, signal } from '@an
 import { MaterialDesignSystemModule } from './material-design-system/material-design-system.module';
 import { ISegmentedButtonOption } from './material-design-system/components/buttons/segmented/segmented-button.component';
 import { MaterialDesignSystemService, MaterialDesignSystemTheme } from './material-design-system/services/material-design-system.service';
+import { IListItem } from './material-design-system/components/lists/list/list.component';
 
 type DialogState = 'opened' | 'closed'
 
@@ -37,6 +38,12 @@ export class AppComponent {
     Sed finibus ante a rhoncus commodo. Pellentesque euismod id nulla a posuere. Vivamus ut elit vel purus egestas eleifend eu et magna. Maecenas egestas, sapien at 
     porttitor sollicitudin, metus arcu congue sem, et placerat urna magna et lorem.
   `)
+
+  protected dataList: WritableSignal<IListItem[]> = signal<IListItem[]>([
+    { headline: 'First', supportingText: 'First item'}, 
+    { headline: 'Second', supportingText: 'second item', leadingIcon: 'person', trailingSupportingText: '1+'},
+    { headline: 'Third', supportingText: 'third item', leadingText: 'A', trailingIcon: 'person', disabled: true}
+  ])
 
   protected setTheme = (theme: MaterialDesignSystemTheme): void => this.material_design_system_service.setTheme(theme)
 

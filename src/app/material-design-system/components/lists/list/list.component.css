@@ -1,0 +1,103 @@
+:host {
+        display: flex;
+        overflow: hidden;
+        overflow-y: auto;
+        flex-direction: column;
+        justify-content: stretch;
+}
+
+:host > section.item {
+        gap: 16px;
+        height: 56px;
+        display: flex;
+        overflow: hidden;
+        padding: 0 16px;
+        position: relative;
+        align-items: center;
+        box-sizing: border-box;
+        box-shadow: var(--md-sys-elevation-level0);
+        background-color: var(--md-sys-color-surface);
+        border-radius: var(--md-sys-shape-corner-none);
+        transition: all var(--md-sys-motion-easing-standard) var(--md-sys-motion-duration-short4);
+}
+
+:host > section.item.one-line {
+        height: 56px;
+}
+
+:host > section.item.two-lines {
+        height: 72px;
+}
+
+:host > section.item.three-lines {
+        height: 88px;
+        padding: 12px 16px;
+}
+
+:host > section.item > span.material-symbols-outlined {
+        font-size: 24px;
+        color: var(--md-sys-color-on-surface-variant)
+}
+
+:host > section.item > img.leading {
+        width: 56px;
+        height: 56px;
+        background-color: var(--md-sys-color-on-surface-variant)
+}
+
+:host > section.item > span.title-medium.leading {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        border-radius: 20px;
+        align-items: center;
+        justify-content: center;
+        color: var(--md-sys-color-on-primary-container);
+        background-color: var(--md-sys-color-primary-container);
+}
+
+:host > section.item > section.content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+}
+
+:host > section.item > section.content > span.body-large {
+        color: var(--md-sys-color-on-surface);
+}
+
+:host > section.item > section.content > span.body-medium {
+        color: var(--md-sys-color-on-surface-variant);
+}
+
+:host > section.item > *.trailing {
+        color: var(--md-sys-color-on-surface-variant);
+}
+
+:host > section.item > mds-divider {
+        bottom: 0;
+        left: 16px;
+        right: 16px;
+        position: absolute;
+}
+
+:host > section.item.disabled {
+        pointer-events: none;
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) 12%);
+}
+
+:host > section.item.disabled * {
+        color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) 38%);
+}
+
+:host > section.item:not(.disabled):hover {
+        background-color: color-mix(in srgb, var(--md-sys-color-surface), var(--md-sys-color-on-surface) var(--md-sys-state-hover-state-layer-opacity));
+}
+
+:host > section.item:not(.disabled):focus-visible {
+        background-color: color-mix(in srgb, var(--md-sys-color-surface), var(--md-sys-color-on-surface) var(--md-sys-state-focus-state-layer-opacity));
+}
+
+:host > section.item:not(.disabled):active {
+        background-color: color-mix(in srgb, var(--md-sys-color-surface), var(--md-sys-color-on-surface) var(--md-sys-state-pressed-state-layer-opacity));
+}

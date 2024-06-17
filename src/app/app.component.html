@@ -233,6 +233,13 @@
                 <mds-suggestion-chip label="Suggestion" [disabled]="true"/>
                 <mds-suggestion-chip label="Suggestion" [elevated]="true" [disabled]="true"/>
         </section>
+
+        <section class="line">
+                <mds-list [data]="dataList()"/>
+                <mds-list [data]="dataList()" [divided]="true"/>
+                <mds-list [data]="dataList()" [divided]="true" [withLeadingCheckbox]="true"/>
+                <mds-list [data]="dataList()" [divided]="true" [withTrailingCheckbox]="true"/>
+        </section>
 </article>
 
 @if(dialogOpened()) {

@@ -1,0 +1,43 @@
+@for (item of data(); track $index) {
+        <section 
+                class="item" 
+                [ngClass]="{
+                        disabled: item.disabled,
+                        'one-line': !item.supportingText,
+                        'two-lines': item.supportingText
+                }">
+                @if (withLeadingCheckbox()) {
+                        <mds-checkbox/>
+                } @else {
+                        @if (item.leadingImage || item.leadingIcon || item.leadingText) {
+                                @if(item.leadingImage) {
+                                        <img class="leading" [src]="item.leadingImage"/>
+                                } @else if (item.leadingIcon) {
+                                        <span class="leading material-symbols-outlined">{{ item.leadingIcon }}</span>
+                                } @else {
+                                        <span class="leading title-medium">{{ item.leadingText }}</span>
+                                }
+                        }
+                }
+                <section class="content">
+                        <span class="body-large">{{ item.headline }}</span>
+                        @if(item.supportingText) {
+                                <span class="body-medium">{{ item.supportingText }}</span>
+                        }
+                </section>
+                @if (withTrailingCheckbox()) {
+                        <mds-checkbox/>
+                } @else {
+                        @if (item.trailingIcon || item.trailingSupportingText) {
+                                @if(item.trailingIcon) {
+                                        <span class="trailing material-symbols-outlined">{{ item.trailingIcon }}</span>
+                                } @else  {
+                                        <span class="trailing label-small">{{ item.trailingSupportingText }}</span>
+                                }
+                        }
+                }
+                @if(divided()) {
+                        <mds-divider/>
+                }
+        </section>
+}
