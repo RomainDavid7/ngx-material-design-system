@@ -1,6 +1,7 @@
 @for (item of data(); track $index) {
         <section 
                 class="item" 
+                [tabIndex]="item.disabled ? -1 : 0"
                 [ngClass]="{
                         disabled: item.disabled,
                         'one-line': !item.supportingText,

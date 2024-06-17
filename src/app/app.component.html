@@ -240,6 +240,16 @@
                 <mds-list [data]="dataList()" [divided]="true" [withLeadingCheckbox]="true"/>
                 <mds-list [data]="dataList()" [divided]="true" [withTrailingCheckbox]="true"/>
         </section>
+
+        <section class="line">
+                <mds-menu>
+                        <mds-menu-item label="Item 1"/>
+                        <mds-menu-item label="Item 2" leadingIcon="check" [disabled]="true"/>
+                        <mds-menu-item label="Item 3" trailingIcon="arrow_right"/>
+                        <mds-divider/>
+                        <mds-menu-item label="Item 4" leadingIcon="check" trailingIcon="arrow_right"/>
+                </mds-menu>
+        </section>
 </article>
 
 @if(dialogOpened()) {

@@ -1,0 +1,13 @@
+:host {
+        display: flex;
+        padding: 8px 0;
+        min-width: 112px;
+        max-width: 280px;
+        height: fit-content;
+        align-items: stretch;
+        justify-content: start;
+        flex-direction: column;
+        box-shadow: var(--md-sys-elevation-level2);
+        border-radius: var(--md-sys-shape-corner-extra-small);
+        background-color: var(--md-sys-color-surface-container);
+}
