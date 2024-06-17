@@ -7,7 +7,7 @@
                         'two-lines': item.supportingText
                 }">
                 @if (withLeadingCheckbox()) {
-                        <mds-checkbox/>
+                        <mds-checkbox [disabled]="!!item.disabled"/>
                 } @else {
                         @if (item.leadingImage || item.leadingIcon || item.leadingText) {
                                 @if(item.leadingImage) {
@@ -26,7 +26,7 @@
                         }
                 </section>
                 @if (withTrailingCheckbox()) {
-                        <mds-checkbox/>
+                        <mds-checkbox [disabled]="!!item.disabled"/>
                 } @else {
                         @if (item.trailingIcon || item.trailingSupportingText) {
                                 @if(item.trailingIcon) {

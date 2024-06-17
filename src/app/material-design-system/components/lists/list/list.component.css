@@ -86,7 +86,20 @@
         background-color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) 12%);
 }
 
-:host > section.item.disabled * {
+:host > section.item.disabled > span {
+        color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) 38%);
+}
+
+:host > section.item.disabled > span {
+        color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) 38%);
+}
+
+:host > section.item.disabled > span.title-medium.leading {
+        color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) 38%);
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) 12%);
+}
+
+:host > section.item.disabled > section.content > span {
         color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) 38%);
 }
 
