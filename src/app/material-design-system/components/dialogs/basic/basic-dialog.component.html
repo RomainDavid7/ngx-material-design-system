@@ -1,0 +1,18 @@
+<section class="container">
+        @if(icon()) {
+                <span class="material-symbols-outlined">{{ icon() }}</span>
+        }
+        <span class="headline-small">{{ headline() }}</span>
+        <span class="body-medium">{{ supportingText() }}</span>
+        @if (displayDividers()) {
+                <!--TODO: DIVIDERS-->
+        }
+        <ng-content/>
+        @if (displayDividers()) {
+                <!--TODO: DIVIDERS-->
+        }
+        <section class="line">
+                <mds-text-button [label]="leftButtonLabel()" (click)="onLeftButtonClicked.emit($event)"/>
+                <mds-text-button [label]="rightButtonLabel()" (click)="onRightButtonClicked.emit($event)"/>
+        </section>
+</section>

@@ -1,0 +1,8 @@
+<section class="header">
+        <mds-standard-icon-button [icon]="iconButton()" (click)="onIconClicked.emit($event)"/>
+        <span class="title-large">{{ headline() }}</span>
+        <mds-text-button [label]="textButton()" (click)="onTextClicked.emit($event)"/>
+</section>
+<section class="content">
+        <ng-content/>
+</section>

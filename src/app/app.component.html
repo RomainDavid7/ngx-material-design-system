@@ -23,6 +23,8 @@
 </mds-bottom-app-bar>
 
 <section id="theme-manager">
+        <mds-outlined-icon-button icon="dialogs" (click)="_setDialog()"/>
+        <mds-outlined-icon-button icon="pages" (click)="_setFullDialog()"/>
         <mds-outlined-icon-button icon="light_mode" (click)="setTheme('light')"/>
         <mds-outlined-icon-button icon="dark_mode" (click)="setTheme('dark')"/>
 </section>
@@ -232,3 +234,27 @@
                 <mds-suggestion-chip label="Suggestion" [elevated]="true" [disabled]="true"/>
         </section>
 </article>
+
+@if(dialogOpened()) {
+        <mds-basic-dialog 
+                icon="refresh" 
+                headline="Basic dialog" 
+                [supportingText]="textPlaceHolder()" 
+                [displayDividers]="true"
+                leftButtonLabel="Cancel" 
+                rightButtonLabel="Confirm"
+                (onLeftButtonClicked)="_setDialog()"
+                (onRightButtonClicked)="_setDialog()">
+                <span>{{ textPlaceHolder() }}</span>
+        </mds-basic-dialog>
+}
+
+@if(fullDialogOpened()) {
+        <mds-full-screen-dialog 
+                textButton="Confirm" 
+                headline="Full screen dialog" 
+                (onIconClicked)="_setFullDialog()"
+                (onTextClicked)="_setFullDialog()">
+                <span>{{ textPlaceHolder() }}</span>
+        </mds-full-screen-dialog>
+}

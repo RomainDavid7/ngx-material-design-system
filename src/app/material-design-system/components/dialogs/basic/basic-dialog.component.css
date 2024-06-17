@@ -1,0 +1,75 @@
+:host {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+        display: flex;
+        position: fixed;
+        align-items: center;
+        justify-content: center;
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-scrim) 10%);
+}
+
+:host > section.container {
+        gap: 16px;
+        display: flex;
+        padding: 24px;
+        min-width: 280px;
+        max-width: 560px;
+        align-items: center;
+        box-sizing: border-box;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: var(--md-sys-elevation-level3);
+        border-radius: var(--md-sys-shape-corner-extra-large);
+        background-color: var(--md-sys-color-surface-container-high);
+        transition: all var(--md-sys-motion-easing-standard) var(--md-sys-motion-duration-short4);
+}
+
+:host:not(.with-icon) > section.container > span.headline-small {
+        width: 100%;
+}
+
+:host > section.container > span.material-symbols-outlined {
+        font-size: 24px;
+        color: var(--md-sys-color-secondary)
+}
+
+:host > section.container > span.headline-small {
+        color: var(--md-sys-color-on-surface);
+}
+
+:host > section.container > span.body-medium {
+        width: 100%;
+        color: var(--md-sys-color-on-surface-variant)
+}
+
+:host > section.container > section.line {
+        gap: 8px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 8px;
+        align-items: center;
+        justify-content: right;
+        box-sizing: border-box;
+}
+
+:host > section.container:hover {
+        background-color: color-mix(in srgb, var(--md-sys-color-surface-container-high), var(--md-sys-color-primary) var(--md-sys-state-hover-state-layer-opacity));
+}
+
+:host > section.container:focus-visible {
+        background-color: color-mix(in srgb, var(--md-sys-color-surface-container-high), var(--md-sys-color-primary) var(--md-sys-state-focus-state-layer-opacity));
+}
+
+:host > section.container:active {
+        background-color: color-mix(in srgb, var(--md-sys-color-surface-container-high), var(--md-sys-color-primary) var(--md-sys-state-pressed-state-layer-opacity));
+}
+
+:host > section.container:hover > span.headline-small,
+:host > section.container:focus-visible > span.headline-small,
+:host > section.container:active > span.headline-small {
+        color: var(--md-sys-color-primary);
+}

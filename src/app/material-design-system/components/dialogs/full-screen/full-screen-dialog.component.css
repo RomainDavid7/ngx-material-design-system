@@ -1,0 +1,74 @@
+:host {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        box-shadow: var(--md-sys-elevation-level0);
+        background-color: var(--md-sys-color-surface);
+        border-radius: var(--md-sys-shape-corner-none);
+}
+
+:host > section.header {
+        gap: 8px;
+        width: 100%;
+        height: 56px;
+        display: flex;
+        padding: 0 8px;
+        align-items: center;
+        box-sizing: border-box;
+        background-color: var(--md-sys-color-surface);
+        transition: all var(--md-sys-motion-easing-standard) var(--md-sys-motion-duration-short4);
+}
+
+:host > section.header > mds-text-button {
+        margin-left: auto;
+}
+
+:host > section.header > span.title-large {
+        color: var(--md-sys-color-on-surface);
+}
+
+:host.on-scroll {
+        background-color: var(--md-sys-color-surface-container);
+}
+
+:host.on-scroll > section.header {
+        box-shadow: var(--md-sys-elevation-level2);
+}
+
+:host > section.content {
+        padding: 16px;
+        overflow: hidden;
+        overflow-y: auto;
+        box-sizing: border-box;
+        height: calc(100% - 56px);
+        transition: all var(--md-sys-motion-easing-standard) var(--md-sys-motion-duration-short4);
+}
+
+:host > section.header:hover {
+        background-color: color-mix(in srgb, var(--md-sys-color-surface), var(--md-sys-color-primary) var(--md-sys-state-hover-state-layer-opacity));
+}
+
+:host > section.content:hover {
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-primary) var(--md-sys-state-hover-state-layer-opacity));
+}
+
+:host > section.header:focus-visible {
+        background-color: color-mix(in srgb, var(--md-sys-color-surface), var(--md-sys-color-primary) var(--md-sys-state-focus-state-layer-opacity));
+}
+
+:host > section.content:focus-visible {
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-primary) var(--md-sys-state-focus-state-layer-opacity));
+}
+
+:host > section.header:active {
+        background-color: color-mix(in srgb, var(--md-sys-color-surface), var(--md-sys-color-primary) var(--md-sys-state-pressed-state-layer-opacity));
+}
+
+:host > section.content:active {
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-primary) var(--md-sys-state-pressed-state-layer-opacity));
+}
