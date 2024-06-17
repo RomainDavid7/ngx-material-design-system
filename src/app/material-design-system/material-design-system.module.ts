@@ -7,6 +7,7 @@ import { AppBarsModule } from "./components/app-bars/app-bars.module";
 import { CheckboxesModule } from "./components/checkboxes/checkboxes.module";
 import { MaterialDesignSystemService } from "./services/material-design-system.service";
 import { DialogsModule } from "./components/dialogs/dialogs.module";
+import { DividersModule } from "./components/dividers/dividers.module";
 
 @NgModule({
         providers: [MaterialDesignSystemService],
@@ -17,7 +18,8 @@ import { DialogsModule } from "./components/dialogs/dialogs.module";
                 CardsModule,
                 CheckboxesModule,
                 ChipsModule,
-                DialogsModule
+                DialogsModule,
+                DividersModule
         ],
         exports: [
                 AppBarsModule,
@@ -26,7 +28,8 @@ import { DialogsModule } from "./components/dialogs/dialogs.module";
                 CardsModule,
                 CheckboxesModule,
                 ChipsModule,
-                DialogsModule
+                DialogsModule,
+                DividersModule
         ]
 })
 export class MaterialDesignSystemModule {}

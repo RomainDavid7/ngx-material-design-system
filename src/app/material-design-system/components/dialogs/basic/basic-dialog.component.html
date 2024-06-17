@@ -5,11 +5,11 @@
         <span class="headline-small">{{ headline() }}</span>
         <span class="body-medium">{{ supportingText() }}</span>
         @if (displayDividers()) {
-                <!--TODO: DIVIDERS-->
+                <mds-divider/>
         }
         <ng-content/>
         @if (displayDividers()) {
-                <!--TODO: DIVIDERS-->
+                <mds-divider/>
         }
         <section class="line">
                 <mds-text-button [label]="leftButtonLabel()" (click)="onLeftButtonClicked.emit($event)"/>
