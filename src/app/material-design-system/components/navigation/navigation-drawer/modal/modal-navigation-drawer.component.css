@@ -1,0 +1,21 @@
+:host {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+        position: fixed;
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-scrim) 10%);
+}
+
+mds-navigation-drawer {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+}
+
+mds-navigation-drawer::ng-deep {
+        box-shadow: var(--md-sys-elevation-level1);
+        background-color: var(--md-sys-color-surface-container-low);
+}

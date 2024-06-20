@@ -1,8 +1,10 @@
+import { CommonModule } from '@angular/common';
+import { IListItem } from './material-design-system/components/lists/list/list.component';
 import { Component, Signal, WritableSignal, computed, inject, signal } from '@angular/core';
 import { MaterialDesignSystemModule } from './material-design-system/material-design-system.module';
 import { ISegmentedButtonOption } from './material-design-system/components/buttons/segmented/segmented-button.component';
+import { INavigationBarItem } from './material-design-system/components/navigation/navigation-bar/navigation-bar.component';
 import { MaterialDesignSystemService, MaterialDesignSystemTheme } from './material-design-system/services/material-design-system.service';
-import { IListItem } from './material-design-system/components/lists/list/list.component';
 
 type DialogState = 'opened' | 'closed'
 
@@ -11,17 +13,23 @@ type DialogState = 'opened' | 'closed'
   selector: 'app-root',
   styleUrl: './app.component.css',
   templateUrl: './app.component.html',
-  imports: [MaterialDesignSystemModule]
+  imports: [CommonModule, MaterialDesignSystemModule]
 })
 export class AppComponent {
 
   private material_design_system_service: MaterialDesignSystemService = inject<MaterialDesignSystemService>(MaterialDesignSystemService)
 
+  private drawerState: WritableSignal<DialogState> = signal<DialogState>('closed')
+
   private dialogState: WritableSignal<DialogState> = signal<DialogState>('closed')
 
   private fullDialogState: WritableSignal<DialogState> = signal<DialogState>('closed')
 
+  protected isDrawerMenuOpened: WritableSignal<boolean> = signal<boolean>(false)
+
   protected dialogOpened: Signal<boolean> = computed<boolean>(() => this.dialogState() === 'opened')
+
+  protected drawerModalOpened: Signal<boolean> = computed<boolean>(() => this.drawerState() === 'opened')
 
   protected fullDialogOpened: Signal<boolean> = computed<boolean>(() => this.fullDialogState() === 'opened')
 
@@ -45,7 +53,17 @@ export class AppComponent {
     { headline: 'Third', supportingText: 'third item', leadingText: 'A', trailingIcon: 'person', disabled: true}
   ])
 
+  protected navbarItems: WritableSignal<INavigationBarItem[]> = signal<INavigationBarItem[]>([
+    { icon: 'radio_button_unchecked', label: 'Label 1', active: true, badgeLabel: '', displayBadge: false, link: '/' },
+    { icon: 'check_box_outline_blank', label: 'Label 2', active: false, badgeLabel: '', displayBadge: true, link: '/' },
+    { icon: 'change_history', label: 'Label 3', active: false, badgeLabel: '1', displayBadge: true, link: '/' },
+  ])
+
+  protected toggleMenu = (): void => this.isDrawerMenuOpened.update((value: boolean) => !value)
+
   protected setTheme = (theme: MaterialDesignSystemTheme): void => this.material_design_system_service.setTheme(theme)
+
+  protected _setDrawer = (): void => this.drawerState.update((state: DialogState) => state === 'opened' ? 'closed' : 'opened')
 
   protected _setDialog = (): void => this.dialogState.update((state: DialogState) => state === 'opened' ? 'closed' : 'opened')
 

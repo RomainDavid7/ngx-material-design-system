@@ -1,0 +1,16 @@
+@for (item of items(); track $index) {
+        <section 
+                class="item" 
+                [tabIndex]="0" 
+                [routerLink]="item.link"
+                [ngClass]="{active: item.active}" 
+                (click)="handleItemSelected(item)">
+                <span class="material-symbols-outlined">
+                        {{ item.icon }}
+                        @if(item.displayBadge) {
+                                <mds-badge [label]="item.badgeLabel"/>
+                        }
+                </span>
+                <span class="label-medium">{{ item.label }}</span>
+        </section>
+}

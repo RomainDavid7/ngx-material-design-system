@@ -1,0 +1,7 @@
+<span class="material-symbols-outlined">
+        {{ icon() }}
+        @if (badgeDisplayed()) {
+                <mds-badge [label]="badgeLabel()"/>
+        }
+</span>
+<span class="label-medium">{{ label() }}</span>
