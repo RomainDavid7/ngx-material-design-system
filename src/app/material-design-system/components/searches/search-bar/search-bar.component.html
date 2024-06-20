@@ -1,0 +1,5 @@
+<mds-standard-icon-button [icon]="leadingIcon()" (click)="onLeadingIconClicked.emit($event)"/>
+<input [(ngModel)]="value" [placeholder]="supportingText()" class="body-large"/>
+@if (trailingIcon()) {
+        <mds-standard-icon-button [icon]="trailingIcon()!" (click)="onTrailingIconClicked.emit($event)"/>
+}

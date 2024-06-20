@@ -12,6 +12,7 @@ import { MaterialDesignSystemService } from "./services/material-design-system.s
 import { MenusModule } from "./components/menus/menus.module";
 import { NavigationModule } from "./components/navigation/navigation.module";
 import { RadioButtonsModule } from "./components/radio-buttons/radio-buttons.module";
+import { SearchesModule } from "./components/searches/searches.module";
 
 @NgModule({
         providers: [MaterialDesignSystemService],
@@ -26,8 +27,9 @@ import { RadioButtonsModule } from "./components/radio-buttons/radio-buttons.mod
                 DividersModule,
                 ListsModule,
                 MenusModule,
-                NavigationModule, 
-                RadioButtonsModule
+                NavigationModule,
+                RadioButtonsModule,
+                SearchesModule
         ],
         exports: [
                 AppBarsModule,
@@ -41,7 +43,8 @@ import { RadioButtonsModule } from "./components/radio-buttons/radio-buttons.mod
                 ListsModule,
                 MenusModule,
                 NavigationModule,
-                RadioButtonsModule
+                RadioButtonsModule,
+                SearchesModule
         ]
 })
 export class MaterialDesignSystemModule {}

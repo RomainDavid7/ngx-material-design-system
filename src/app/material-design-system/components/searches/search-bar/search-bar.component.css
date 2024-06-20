@@ -1,0 +1,40 @@
+:host {
+        gap: 8px;
+        height: 56px;
+        display: flex;
+        padding: 0 8px;
+        min-width: 360px;
+        max-width: 720px;
+        align-items: center;
+        border-radius: 28px;
+        box-sizing: border-box;
+        box-shadow: var(--md-sys-elevation-level3);
+        background-color: var(--md-sys-color-surface-container-high);
+}
+
+:host > input {
+        flex-grow: 1;
+        border: none;
+        background-color: transparent;
+        color: var(--md-sys-color-on-surface);
+}
+
+:host > input:focus {
+        outline: none;
+}
+
+:host > input::placeholder {
+        color: var(--md-sys-color-on-surface-variant);
+}
+
+:host:hover {
+        background-color: color-mix(in srgb, var(--md-sys-color-surface-container-high), var(--md-sys-color-on-surface) var(--md-sys-state-hover-state-layer-opacity));
+}
+
+:host:focus-visible {
+        background-color: color-mix(in srgb, var(--md-sys-color-surface-container-high), var(--md-sys-color-on-surface) var(--md-sys-state-focus-state-layer-opacity));
+}
+
+:host:active {
+        background-color: color-mix(in srgb, var(--md-sys-color-surface-container-high), var(--md-sys-color-on-surface) var(--md-sys-state-pressed-state-layer-opacity));
+}
