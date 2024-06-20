@@ -1,6 +1,9 @@
-import { Component, InputSignal, viewChild, input, ProviderToken, effect, ElementRef, inject, WritableSignal, signal, computed, Signal, OutputEmitterRef, output } from "@angular/core";
+import { Component, InputSignal, input, effect, WritableSignal, signal, computed, Signal, OutputEmitterRef, output } from "@angular/core";
 
-@Component({ template: '' })
+@Component({
+        template: '',
+        host: { '[class.on-scroll]': 'scrolled()' }
+})
 export class TopAppBarComponent {
 
         public text: InputSignal<string> = input.required<string>()

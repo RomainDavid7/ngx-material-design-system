@@ -5,8 +5,5 @@ import { TopAppBarComponent } from "../top/top-app-bar.component";
         selector: 'mds-small-top-app-bar',
         templateUrl: './small-top-app-bar.component.html',
         styleUrls: ['./small-top-app-bar.component.css', '../top/top-app-bar.component.css'],
-        host: {
-                '[class.on-scroll]': 'scrolled()'
-        }
 })
 export class SmallTopAppBarComponent extends TopAppBarComponent {}

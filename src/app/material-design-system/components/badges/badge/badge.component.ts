@@ -1,12 +1,10 @@
-import { Component, InputSignal, Signal, computed, input } from "@angular/core";
+import { Component, InputSignal, input } from "@angular/core";
 
 @Component({
         selector: 'mds-badge',
         styleUrl: './badge.component.css',
         templateUrl: './badge.component.html',
-        host: {
-                '[class.large]': '!!label()'
-        }
+        host: { '[class.large]': '!!label()' }
 })
 export class BadgeComponent {
 
