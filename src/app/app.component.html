@@ -273,6 +273,12 @@
                         <mds-standard-icon-button icon="cancel"/>
                 </mds-bottom-app-bar>
         </section>
+
+        <section class="line">
+                <mds-radio-button [selected]="false"/>
+                <mds-radio-button [selected]="false" [disabled]="true"/>
+                <mds-radio-button [selected]="true" [disabled]="true"/>
+        </section>
 </article>
 
 @if(dialogOpened()) {

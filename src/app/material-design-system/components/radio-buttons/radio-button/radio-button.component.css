@@ -1,0 +1,77 @@
+:host {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        border-radius: 20px;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        transition: all var(--md-sys-motion-easing-standard) var(--md-sys-motion-duration-short4);
+}
+
+:host.disabled {
+        pointer-events: none;
+}
+
+:host > div {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        border-width: 2px;
+        border-radius: 10px;
+        border-style: solid;
+        align-items: center;
+        box-sizing: border-box;
+        justify-content: center;
+        border-color: var(--md-sys-color-on-surface-variant);
+        transition: all var(--md-sys-motion-easing-standard) var(--md-sys-motion-duration-short4);
+}
+
+:host > div > span {
+        width: 12px;
+        height: 12px;
+        border-radius: 6px;
+        box-sizing: border-box;
+        background-color: transparent;
+        transition: all var(--md-sys-motion-easing-standard) var(--md-sys-motion-duration-short4);
+}
+
+:host.selected > div {
+        border-color: var(--md-sys-color-primary);
+}
+
+:host.selected > div > span {
+        background-color: var(--md-sys-color-primary);
+}
+
+:host.disabled > div {
+        border-color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) 38%);
+}
+
+:host.disabled.selected > div > span {
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) 38%);
+}
+
+:host:hover {
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) var(--md-sys-state-hover-state-layer-opacity));
+}
+
+:host.selected:hover {
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-primary) var(--md-sys-state-hover-state-layer-opacity));
+}
+
+:host:focus-visible {
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) var(--md-sys-state-focus-state-layer-opacity));
+}
+
+:host.selected:focus-visible {
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-primary) var(--md-sys-state-focus-state-layer-opacity));
+}
+
+:host:active {
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-on-surface) var(--md-sys-state-pressed-state-layer-opacity));
+}
+
+:host.selected:active {
+        background-color: color-mix(in srgb, transparent, var(--md-sys-color-primary) var(--md-sys-state-pressed-state-layer-opacity));
+}
