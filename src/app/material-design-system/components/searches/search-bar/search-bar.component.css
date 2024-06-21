@@ -10,6 +10,7 @@
         box-sizing: border-box;
         box-shadow: var(--md-sys-elevation-level3);
         background-color: var(--md-sys-color-surface-container-high);
+        transition: all var(--md-sys-motion-easing-standard) var(--md-sys-motion-duration-short4);
 }
 
 :host > input {
